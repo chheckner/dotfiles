@@ -10,7 +10,9 @@ For Beginners:
 add to your .bashrc or .zshrc (the functions/aliases work in both):
 
 if [ -e $HOME/.shell_functions ]; then
+
         source $HOME/.shell_functions
+        
 fi
 
 for this to work, the file has to be in your ~/ directory.
