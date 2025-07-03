@@ -1,0 +1,24 @@
+#!/bin/sh
+# basically the key-handler as displayed on archwiki.
+# The wallpaper shortcut is adjusted for gnome-desktop.
+# shortcut prefix is Crtl-x 
+# the wallpaper shortcut will set the chosen wallpaper in both light- and dark mode of gnome-desktop
+# for cinnamon desktop, just change gnome to cinnamon as in:
+# gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/.config.wall.png
+# if you'd like to make use of the copy shortcut, xclip is required
+while read file
+do
+        case "$1" in
+        "C-d")
+                mv "$file" ~/.trash ;;
+        "C-r")
+                convert -rotate 90 "$file" "$file" ;;
+        "C-c")
+                echo -n "$file" | xclip -selection clipboard ;;
+        "C-w")
+                cp "$file" ~/.config/wall.png 
+		gsettings set org.gnome.desktop.background picture-uri-dark "file://$HOME/.config/wall.png"
+		gsettings set org.gnome.desktop.background picture-uri "file://$HOME/.config/wall.png"
+		;;	
+        esac
+done
