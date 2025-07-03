@@ -11,7 +11,7 @@ add to your .bashrc or .zshrc (the functions/aliases work in both):
 
 if [ -e $HOME/.shell_functions ]; then
 
-        source $HOME/.shell_functions
+source $HOME/.shell_functions
         
 fi
 
