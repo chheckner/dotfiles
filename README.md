@@ -24,3 +24,6 @@ I added the key-handler file for sxiv image-viewer. It actually belongs in ~/.co
 I only added it, because it can automatically set the wallpaper for gnome-desktop and I actually haven't found an example of this anywhere.
 
 Also, it works nicely with the wp script in my scripts repository.
+
+
+vimrc and bashrc are just for me to sync easier...
