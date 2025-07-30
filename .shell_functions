@@ -19,10 +19,8 @@ fl () {
 	file=$(find . maxdepth "$maxdepth" -type f 2>/dev/null | fzf)
 	if
 		[[ -n "$file" ]];then
-		echo -e "\nls -l output:\n"
-		ls -lh --color=auto "$file"
-		echo -e "\nfile output:\n"
 		file "$file"
+		stat $file;
 	fi
 }
 
